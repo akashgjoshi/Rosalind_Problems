@@ -1,0 +1,41 @@
+public class DNAtoRNA
+{
+
+public void DNA2RNA(String DNA)
+{
+char[] DNAarray = DNA.toCharArray();
+char[]RNAarray = new char[DNAarray.length];
+System.out.print(DNA);
+System.out.println("");
+System.out.println("---------------");
+for(int i=0;i<DNAarray.length;i++)
+	{
+	if(DNAarray[i]=='T'){
+		RNAarray[i] = 'U';
+		}
+	else{
+		RNAarray[i]=DNAarray[i];
+		}
+	}
+// Now what we print should be the RNA
+System.out.println("The RNA is-->");
+for(int i=0;i<DNAarray.length;i++)
+	{
+	System.out.print(RNAarray[i]);
+
+	}
+
+}
+//In this program we aim to convert DNA to RNA
+// we convert the T nucleotide to U nucleotide to form RNA from DNA
+	public static void main(String[] arg)
+	{
+	String DNA="GATGGAACTTGACTACGTAAATT";
+	DNAtoRNA dtor = new DNAtoRNA();
+	dtor.DNA2RNA(DNA);
+			
+	
+
+	}
+
+}
